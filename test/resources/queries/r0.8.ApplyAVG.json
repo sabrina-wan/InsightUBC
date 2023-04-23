@@ -1,0 +1,25 @@
+{
+	"title": "testing apply AVG",
+	"input": {
+               "WHERE": {
+                 "GT": {
+                   "rooms_seats": 300
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_shortname", "avgLon"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                "GROUP": ["rooms_shortname"],
+                "APPLY": [
+                  {"avgLon":{"AVG": "rooms_lon"}}
+                ]
+
+               }
+
+             },
+	"errorExpected": false,
+	"with": [{"rooms_shortname":"CIRS","avgLon":-123.25},{"rooms_shortname":"ESB","avgLon":-123.25},{"rooms_shortname":"HEBB","avgLon":-123.25},{"rooms_shortname":"LSC","avgLon":-123.24},{"rooms_shortname":"OSBO","avgLon":-123.24},{"rooms_shortname":"WESB","avgLon":-123.25},{"rooms_shortname":"WOOD","avgLon":-123.25}]
+}

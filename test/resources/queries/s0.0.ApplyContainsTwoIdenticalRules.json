@@ -1,0 +1,31 @@
+{
+    "title": "apply rule contains two identical rule names, throw insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   },
+                   {
+                     "overallAvg": {
+                       "MIN": "courses_fail"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

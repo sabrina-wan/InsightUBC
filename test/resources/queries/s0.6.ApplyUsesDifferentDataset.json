@@ -1,0 +1,26 @@
+{
+    "title": "apply queries different dataset than anything else, throw insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "course_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

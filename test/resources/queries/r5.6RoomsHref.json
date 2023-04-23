@@ -1,0 +1,17 @@
+{
+	"title": "queries rooms href",
+	"input": {
+               "WHERE": {
+                 "IS": {
+                   "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ALRD-105"
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_fullname"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_fullname":"Allard Hall (LAW)"}]
+}

@@ -1,0 +1,26 @@
+{
+    "title": "column name is not valid room column, throw insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_instructor",
+                   "overallLon"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "rooms_instructor"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallLon": {
+                       "AVG": "rooms_lon"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

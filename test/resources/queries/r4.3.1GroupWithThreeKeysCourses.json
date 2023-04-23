@@ -1,0 +1,20 @@
+{
+	"title": "group contains three courses keys",
+	"input": {
+               "WHERE": {"IS":{"courses_dept": "z*"}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_pass", "courses_dept", "courses_fail"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_pass", "courses_dept", "courses_fail"
+
+                 ],
+                 "APPLY": []
+               }
+             },
+	"errorExpected": false,
+	"with": [{"courses_pass":10,"courses_dept":"zool","courses_fail":0},{"courses_pass":11,"courses_dept":"zool","courses_fail":0},{"courses_pass":9,"courses_dept":"zool","courses_fail":0},{"courses_pass":4,"courses_dept":"zool","courses_fail":0},{"courses_pass":7,"courses_dept":"zool","courses_fail":0},{"courses_pass":5,"courses_dept":"zool","courses_fail":0},{"courses_pass":6,"courses_dept":"zool","courses_fail":0},{"courses_pass":1,"courses_dept":"zool","courses_fail":0},{"courses_pass":8,"courses_dept":"zool","courses_fail":0},{"courses_pass":3,"courses_dept":"zool","courses_fail":0},{"courses_pass":13,"courses_dept":"zool","courses_fail":0}]
+}

@@ -1,0 +1,26 @@
+{
+    "title": "apply uses rooms skeys for numerical aggregations, throw insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_shortname",
+                   "Average"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "rooms_shortname"
+                 ],
+                 "APPLY": [
+                   {
+                     "Average": {
+                       "AVG": "rooms_fullname"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

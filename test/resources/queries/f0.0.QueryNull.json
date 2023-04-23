@@ -1,0 +1,6 @@
+{ 
+    "title": "QUERY is null throw InsightError",
+    "input": null,
+    "errorExpected": true,
+    "with": "InsightError"
+}

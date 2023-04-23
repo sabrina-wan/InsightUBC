@@ -1,0 +1,19 @@
+{ 
+  "title": "MCOMPARISON value with invalid value type string throw InsightError",
+  "input": {
+      "WHERE":{
+         "GT":{
+            "courses_avg":"nighty_seven"
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            "courses_dept",
+            "courses_avg"
+         ],
+         "ORDER":"courses_avg"
+      }
+   },
+  "errorExpected": true,
+  "with": "InsightError"
+}

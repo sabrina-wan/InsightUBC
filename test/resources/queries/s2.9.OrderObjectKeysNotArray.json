@@ -1,0 +1,30 @@
+{
+    "title": "order object has non-array keys, throws insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                   "dir": "DOWN",
+                   "keys": "mwahahaha"
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

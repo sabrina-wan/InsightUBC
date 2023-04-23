@@ -1,0 +1,33 @@
+{
+    "title": "order object has wrong direction, throws insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                   "dir": "LEFT",
+                   "keys": [
+                     "courses_title",
+                     "overallAvg"
+                   ]
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

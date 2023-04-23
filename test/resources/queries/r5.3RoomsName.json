@@ -1,0 +1,18 @@
+{
+	"title": "queries room names",
+	"input": {
+               "WHERE": {
+                 "IS": {
+                   "rooms_name": "*_222"
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_name",
+                   "rooms_type"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_name":"SOWK_222","rooms_type":"Open Design General Purpose"},{"rooms_name":"SWNG_222","rooms_type":"Tiered Large Group"}]
+}

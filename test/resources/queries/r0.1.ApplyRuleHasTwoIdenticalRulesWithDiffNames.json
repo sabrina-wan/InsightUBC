@@ -1,0 +1,31 @@
+{
+    "title": "apply rule has two identical rules with different name",
+    "input": {
+               "WHERE": {"GT":{"courses_fail":280}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   },
+                   {
+                     "overall": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": false,
+    "with": [{"courses_title":"structural chem","overallAvg":68.2}]
+  }

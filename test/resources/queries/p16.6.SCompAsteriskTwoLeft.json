@@ -1,0 +1,21 @@
+{
+	"title": "s value has two asterisk sign in front throw insight error",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_dept": "**cpsc"
+			}
+		}
+	,
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"errorExpected": true,
+	"with": "InsightError"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>Statistics by Course</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h2>Statistics by Course</h2>
+        <label for="dept">Subject</label>
+        <select class="course-dept" id="course-dept" name="dept" value="dept" onchange="populateOptions()">
+            <option value="" selected></option>
+        </select>
+        
+        <label for="id">Course</label>
+        <select id="course-id" name="id" value="id"></select>
+        <button id="submit-stats" class="button" onclick="handleSubmitStats()">Submit</button>
+        
+        <h4 id="title"></h4>   
+        <div id="avgDiv" style="display: none;">Average Over Years: <span id="avg"></span></div>
+        <div id="maxDiv" style="display: none;">Max Section Average: <span id="max"></span></div>
+        <div id="minDiv" style="display: none;">Min Section Average: <span id="min"></span></div>
+        <br></br>
+        <div id="tableDiv" style="display: none;">
+			<table id="instructor">
+				<thead><th>Instructor</th><th>Year</th></thead>
+				<tbody></tbody>
+			</table>
+        </div>
+
+        <a id="back-to-menu" href="methods.html">Go back to menu page</a>
+
+		<script type="text/javascript" src="/stats.js"></script>
+	</body>
+</html>

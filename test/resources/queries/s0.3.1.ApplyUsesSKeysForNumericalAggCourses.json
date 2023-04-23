@@ -1,0 +1,26 @@
+{
+    "title": "apply uses courses skeys for numerical aggregations, throw insight error",
+    "input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "Average"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "Average": {
+                       "AVG": "courses_instructor"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

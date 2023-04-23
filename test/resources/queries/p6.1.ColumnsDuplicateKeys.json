@@ -1,0 +1,22 @@
+{ 
+    "title": "COLUMNS has two duplicate keys",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses_avg": 99
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_avg",
+          "courses_avg"
+        ],
+        "ORDER": "courses_avg"
+      }
+    },
+    "errorExpected": false,
+    "with": [{ "courses_avg": 99.19 },
+      { "courses_avg": 99.78 },
+      { "courses_avg": 99.78 }]
+  }
+  

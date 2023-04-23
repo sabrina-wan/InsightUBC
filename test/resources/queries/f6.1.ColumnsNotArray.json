@@ -1,0 +1,18 @@
+{ 
+  "title": "COLUMNS is an object throw InsightError",
+  "input": {
+      "WHERE":{
+         "GT":{
+            "courses_avg":97
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":{
+            "courses_dept": "courses_avg"
+         },
+         "ORDER":"courses_avg"
+      }
+  },
+  "errorExpected": true,
+  "with": "InsightError"
+}

@@ -1,0 +1,19 @@
+{ 
+    "title": "ORDER key is null throw InsightError",
+    "input": {
+        "WHERE": {
+          "LT": {
+            "courses_avg": 4.5
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_avg"
+          ],
+          "ORDER": null
+        }
+      },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

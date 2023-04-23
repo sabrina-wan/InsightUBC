@@ -1,0 +1,38 @@
+{
+	"title": "apply has three rules",
+	"input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_audit",
+                   "overallAvg",
+                   "minFail",
+                   "maxFail"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_audit"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                   }
+                   },
+             			{
+                     "minFail": {
+                       "MIN": "courses_fail"
+                     }
+                   },
+                   {
+                     "maxFail": {
+                       "MAX": "courses_fail"
+                     }
+                   }
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"courses_audit":0,"overallAvg":78.27,"minFail":0,"maxFail":287},{"courses_audit":1,"overallAvg":78.04,"minFail":0,"maxFail":250},{"courses_audit":2,"overallAvg":77.77,"minFail":0,"maxFail":181},{"courses_audit":3,"overallAvg":78.43,"minFail":0,"maxFail":118},{"courses_audit":4,"overallAvg":78.38,"minFail":0,"maxFail":37},{"courses_audit":5,"overallAvg":78.4,"minFail":0,"maxFail":50},{"courses_audit":6,"overallAvg":79.6,"minFail":0,"maxFail":135},{"courses_audit":7,"overallAvg":80.26,"minFail":0,"maxFail":86},{"courses_audit":8,"overallAvg":80.74,"minFail":0,"maxFail":26},{"courses_audit":9,"overallAvg":88.13,"minFail":0,"maxFail":1},{"courses_audit":10,"overallAvg":84.95,"minFail":0,"maxFail":0},{"courses_audit":11,"overallAvg":81.02,"minFail":0,"maxFail":1},{"courses_audit":12,"overallAvg":83.32,"minFail":0,"maxFail":29},{"courses_audit":13,"overallAvg":85.39,"minFail":0,"maxFail":0},{"courses_audit":14,"overallAvg":81.42,"minFail":0,"maxFail":1},{"courses_audit":15,"overallAvg":80.14,"minFail":0,"maxFail":2},{"courses_audit":17,"overallAvg":88,"minFail":0,"maxFail":0},{"courses_audit":18,"overallAvg":88.83,"minFail":0,"maxFail":0},{"courses_audit":19,"overallAvg":84.35,"minFail":0,"maxFail":1},{"courses_audit":20,"overallAvg":87.26,"minFail":0,"maxFail":0},{"courses_audit":21,"overallAvg":88.71,"minFail":0,"maxFail":0},{"courses_audit":23,"overallAvg":88.79,"minFail":0,"maxFail":0}]
+}

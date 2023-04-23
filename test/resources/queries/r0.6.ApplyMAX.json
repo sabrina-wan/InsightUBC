@@ -1,0 +1,25 @@
+{
+	"title": "testing apply max",
+	"input": {
+               "WHERE": {
+                 "GT": {
+                   "rooms_seats": 300
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_shortname", "maxLon"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                "GROUP": ["rooms_shortname"],
+                "APPLY": [
+                  {"maxLon":{"MAX": "rooms_lon"}}
+                ]
+
+               }
+
+             },
+	"errorExpected": false,
+	"with": [{"rooms_shortname":"CIRS","maxLon":-123.25314},{"rooms_shortname":"ESB","maxLon":-123.25224},{"rooms_shortname":"HEBB","maxLon":-123.25165},{"rooms_shortname":"LSC","maxLon":-123.24494},{"rooms_shortname":"OSBO","maxLon":-123.24467},{"rooms_shortname":"WESB","maxLon":-123.24937},{"rooms_shortname":"WOOD","maxLon":-123.24673}]
+}

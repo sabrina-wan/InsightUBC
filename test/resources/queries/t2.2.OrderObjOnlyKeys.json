@@ -1,0 +1,29 @@
+{
+    "title": "Order Object has only keys key",
+    "input": {
+               "WHERE": {"GT": {"courses_fail": 200}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                     "keys": ["overallAvg"]
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

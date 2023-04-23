@@ -1,0 +1,20 @@
+{
+	"title": "one courses key in group",
+	"input": {
+               "WHERE": {},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_audit"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_audit"
+
+                 ],
+                 "APPLY": []
+               }
+             },
+	"errorExpected": false,
+	"with": [{"courses_audit":0},{"courses_audit":1},{"courses_audit":2},{"courses_audit":3},{"courses_audit":4},{"courses_audit":5},{"courses_audit":6},{"courses_audit":7},{"courses_audit":8},{"courses_audit":9},{"courses_audit":10},{"courses_audit":11},{"courses_audit":12},{"courses_audit":13},{"courses_audit":14},{"courses_audit":15},{"courses_audit":17},{"courses_audit":18},{"courses_audit":19},{"courses_audit":20},{"courses_audit":21},{"courses_audit":23}]
+}

@@ -1,0 +1,30 @@
+{
+    "title": "Order Object has keys value as a string",
+    "input": {
+               "WHERE": {"GT": {"courses_fail": 200}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                     "dir": "UP",
+                     "keys": []
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

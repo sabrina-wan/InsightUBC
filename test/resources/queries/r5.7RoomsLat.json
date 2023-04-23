@@ -1,0 +1,17 @@
+{
+	"title": "queries rooms latitude",
+	"input": {
+               "WHERE": {
+                 "EQ": {
+                   "rooms_lat": 49.2699
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_lon"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_lon":-123.25318},{"rooms_lon":-123.25318},{"rooms_lon":-123.25318},{"rooms_lon":-123.25318},{"rooms_lon":-123.25318}]
+}

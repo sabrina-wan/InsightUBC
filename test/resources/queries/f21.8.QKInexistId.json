@@ -1,0 +1,21 @@
+{ 
+  "title": "query key id has not been added throw InsightError",
+  "input": {
+      "WHERE":{
+         "NOT": {
+            "EQ":{
+               "course_avg":97
+            }
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            "course_dept",
+            "course_avg"
+         ],
+         "ORDER":"course_avg"
+      }
+   },
+  "errorExpected": true,
+  "with": "InsightError"
+}

@@ -1,0 +1,25 @@
+{
+	"title": "testing apply COUNT",
+	"input": {
+               "WHERE": {
+                 "GT": {
+                   "rooms_seats": 300
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_shortname", "countBuilding"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                "GROUP": ["rooms_shortname"],
+                "APPLY": [
+                  {"countBuilding":{"COUNT": "rooms_shortname"}}
+                ]
+
+               }
+
+             },
+	"errorExpected": false,
+	"with": [{"rooms_shortname":"CIRS","countBuilding":1},{"rooms_shortname":"ESB","countBuilding":1},{"rooms_shortname":"HEBB","countBuilding":1},{"rooms_shortname":"LSC","countBuilding":1},{"rooms_shortname":"OSBO","countBuilding":1},{"rooms_shortname":"WESB","countBuilding":1},{"rooms_shortname":"WOOD","countBuilding":1}]
+}

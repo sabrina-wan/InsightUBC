@@ -1,0 +1,16 @@
+{ 
+  "title": "BODY value is an empty object, return more than 5000 results throw ResultTooLargeError",
+  "input": {
+    "WHERE": {
+    },
+    "OPTIONS": {
+        "COLUMNS": [
+        "courses_dept",
+        "courses_avg"
+        ],
+        "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "with": "ResultTooLargeError"
+}

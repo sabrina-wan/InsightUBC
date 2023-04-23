@@ -1,0 +1,17 @@
+{
+	"title": "queries rooms seats",
+	"input": {
+               "WHERE": {
+                 "GT": {
+                   "rooms_seats": 450
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_fullname"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_fullname":"Woodward (Instructional Resources Centre-IRC)"}]
+}

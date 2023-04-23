@@ -1,0 +1,23 @@
+{ 
+    "title": "NEGATION key is an empty string",
+    "input": {
+      "WHERE": {
+        "": {
+          "NOT": {
+            "EQ": {
+              "courses_avg": 99.19
+            }
+          }
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_dept",
+          "courses_avg"
+        ],
+        "ORDER": "courses_avg"
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

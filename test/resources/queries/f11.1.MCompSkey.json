@@ -1,0 +1,19 @@
+{ 
+    "title": "MCOMPARISON value with invalid key type skey throw InsightError",
+    "input": {
+        "WHERE":{
+           "GT":{
+              "courses_id":500
+           }
+        },
+        "OPTIONS":{
+           "COLUMNS":[
+              "courses_dept",
+              "courses_avg"
+           ],
+           "ORDER":"courses_avg"
+        }
+     },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

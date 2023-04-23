@@ -1,0 +1,14 @@
+{ 
+    "title": "OPTIONS is an empty object throw InsightError",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses_avg": 97
+        }
+      },
+      "OPTIONS": {
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+}

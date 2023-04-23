@@ -1,0 +1,19 @@
+{ 
+  "title": "query dataset key is not exist throw InsightError",
+  "input": {
+      "WHERE":{
+         "GT":{
+            "courses_average":97
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            "courses_department",
+            "courses_average"
+         ],
+         "ORDER":"courses_average"
+      }
+   },
+  "errorExpected": true,
+  "with": "InsightError"
+}

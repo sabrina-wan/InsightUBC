@@ -1,0 +1,19 @@
+{ 
+  "title": "NEQ not exist in MComparator throw InsightError",
+  "input": {
+      "WHERE":{
+         "NEQ":{
+            "courses_avg":97
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            "courses_dept",
+            "courses_avg"
+         ],
+         "ORDER":"courses_avg"
+      }
+   },
+  "errorExpected": true,
+  "with": "InsightError"
+}

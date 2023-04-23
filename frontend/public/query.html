@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+		<title>Plain Query</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h2>Plain Query</h2>
+        <div class="box">
+        <div class="div-left" style="display: inline-block;">
+            <textarea id="plain-query" name="query" rows="40" cols="40"></textarea>
+            <button id="submit-query" class="button" onclick="handleSubmitQuery()">Submit</button>
+        </div>
+
+        <div class="div-right" id="resultDiv" style="display: none;">
+            <h4 id="message"></h4>
+			<table id="result">
+				<thead></thead>
+				<tbody></tbody>
+			</table>
+        </div>
+    </div>
+
+	<a id="back-to-menu" href="methods.html">Go back to menu page</a>
+
+		<script type="text/javascript" src="/query.js"></script>
+	</body>
+</html>

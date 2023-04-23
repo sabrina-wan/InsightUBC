@@ -1,0 +1,14 @@
+{
+    "title": "queries shortname",
+    "input": {
+               "WHERE": {"IS": {"rooms_shortname":"DM*"}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_name",
+                   "rooms_type"
+                 ]
+               }
+             },
+    "errorExpected": false,
+    "with": [{"rooms_name":"DMP_101","rooms_type":"Small Group"},{"rooms_name":"DMP_110","rooms_type":"Tiered Large Group"},{"rooms_name":"DMP_201","rooms_type":"Small Group"},{"rooms_name":"DMP_301","rooms_type":"Tiered Large Group"},{"rooms_name":"DMP_310","rooms_type":"Tiered Large Group"}]
+}

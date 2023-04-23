@@ -1,0 +1,17 @@
+{
+	"title": "queries rooms type",
+	"input": {
+               "WHERE": {
+                 "IS": {
+                   "rooms_type": "mwahahahaha"
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_type"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": []
+}

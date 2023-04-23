@@ -1,0 +1,19 @@
+{ 
+    "title": "query key is missing id throw InsightError",
+    "input": {
+      "WHERE":{
+         "GT":{
+            "avg":99
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            "dept",
+            "avg"
+         ],
+         "ORDER":"avg"
+      }
+   },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

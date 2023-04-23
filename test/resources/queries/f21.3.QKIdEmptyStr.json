@@ -1,0 +1,19 @@
+{ 
+    "title": "query key has empty string id throw InsightError",
+    "input": {
+      "WHERE":{
+         "LT":{
+            "_avg":99
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            "_dept",
+            "_avg"
+         ],
+         "ORDER":"_avg"
+      }
+   },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

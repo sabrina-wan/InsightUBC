@@ -1,0 +1,19 @@
+{
+	"title": "Testing order down",
+	"input": {
+               "WHERE": {"IS": {"courses_dept": "zool"}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title"
+                 ],
+                 "ORDER": {
+                   "dir": "DOWN",
+                   "keys": [
+                     "courses_title"
+                   ]
+                 }
+               }
+             },
+	"errorExpected": false,
+	"with": [{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"masters thesis"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"},{"courses_title":"comp animal phyl"}]
+}

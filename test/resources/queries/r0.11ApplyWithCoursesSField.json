@@ -1,0 +1,26 @@
+{
+	"title": "apply with courses sfield",
+	"input": {
+               "WHERE": {"GT": {"courses_avg": 98}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "dept"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "dept": {
+                       "COUNT": "courses_dept"
+                     }
+                   }
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"courses_title":"career planning","dept":1},{"courses_title":"multimedia sys","dept":1},{"courses_title":"assess lrn diffi","dept":1},{"courses_title":"educ stds autism","dept":1},{"courses_title":"dev el sk df&hrd","dept":1},{"courses_title":"algb topology i","dept":1},{"courses_title":"cl pro prim care","dept":1},{"courses_title":"fam nrs pract","dept":1},{"courses_title":"work int health","dept":1}]
+}

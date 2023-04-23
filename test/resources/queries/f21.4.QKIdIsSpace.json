@@ -1,0 +1,19 @@
+{ 
+    "title": "query key has space id throw InsightError",
+    "input": {
+      "WHERE":{
+         "EQ":{
+            " _avg":99
+         }
+      },
+      "OPTIONS":{
+         "COLUMNS":[
+            " _dept",
+            " _avg"
+         ],
+         "ORDER":" _avg"
+      }
+   },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

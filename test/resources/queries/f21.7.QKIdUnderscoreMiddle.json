@@ -1,0 +1,23 @@
+{ 
+    "title": "query key has id string contains underscore in the middle throw InsightError",
+    "input": {
+      "WHERE": {
+        "OR": [
+          {
+            "IS": {
+              "courses_ubc_dept": "cpsc"
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_ubc_dept",
+          "courses_ubc_avg"
+        ],
+        "ORDER": "courses_ubc_avg"
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

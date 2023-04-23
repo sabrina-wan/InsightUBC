@@ -1,0 +1,15 @@
+{ 
+    "title": "COLUMNS is null throw InsightError",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses_avg": 97
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS":null
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+}

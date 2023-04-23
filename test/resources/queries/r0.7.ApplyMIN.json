@@ -1,0 +1,25 @@
+{
+	"title": "testing apply MIN",
+	"input": {
+               "WHERE": {
+                 "GT": {
+                   "rooms_seats": 300
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_shortname", "minLon"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                "GROUP": ["rooms_shortname"],
+                "APPLY": [
+                  {"minLon":{"MIN": "rooms_lon"}}
+                ]
+
+               }
+
+             },
+	"errorExpected": false,
+	"with": [{"rooms_shortname":"CIRS","minLon":-123.25314},{"rooms_shortname":"ESB","minLon":-123.25224},{"rooms_shortname":"HEBB","minLon":-123.25165},{"rooms_shortname":"LSC","minLon":-123.24494},{"rooms_shortname":"OSBO","minLon":-123.24467},{"rooms_shortname":"WESB","minLon":-123.24937},{"rooms_shortname":"WOOD","minLon":-123.24673}]
+}

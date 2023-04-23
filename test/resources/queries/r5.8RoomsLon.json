@@ -1,0 +1,17 @@
+{
+	"title": "queries rooms longitude",
+	"input": {
+               "WHERE": {
+                 "LT": {
+                   "rooms_lon": -123.257
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_seats"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_seats":26},{"rooms_seats":33},{"rooms_seats":37},{"rooms_seats":90}]
+}

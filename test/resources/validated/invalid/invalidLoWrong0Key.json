@@ -1,0 +1,20 @@
+{
+    "title": "wrong or lo filter",
+    "input": {
+        "WHERE": {
+            "OR": [{
+
+            }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "errorExpected": true,
+    "with":"InsightError"
+}

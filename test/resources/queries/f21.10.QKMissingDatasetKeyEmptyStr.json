@@ -1,0 +1,19 @@
+{ 
+    "title": "query key is missing dataset key throw InsightError",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses": 99
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses",
+          "courses"
+        ],
+        "ORDER": "courses"
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

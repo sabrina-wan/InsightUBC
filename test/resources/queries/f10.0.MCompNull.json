@@ -1,0 +1,17 @@
+{ 
+    "title": "MCOMPARISON value is null throw InsightError",
+    "input": {
+        "WHERE":{
+           "LT":null
+        },
+        "OPTIONS":{
+           "COLUMNS":[
+              "courses_dept",
+              "courses_avg"
+           ],
+           "ORDER":"courses_avg"
+        }
+     },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

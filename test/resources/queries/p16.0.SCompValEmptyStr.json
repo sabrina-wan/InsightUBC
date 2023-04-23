@@ -1,0 +1,38 @@
+{ 
+    "title": "no asterisks in SCOMPARISON, empty inputstring",
+    "input": {
+        "WHERE": {
+          "AND": [
+            {
+              "AND": [
+                {
+                  "GT": {
+                    "courses_avg": 99
+                  }
+                },
+                {
+                  "IS": {
+                    "courses_instructor": ""
+                  }
+                }
+              ]
+            },
+            {
+              "IS": {
+                "courses_dept": "math"
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_avg",
+            "courses_instructor"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "errorExpected": false,
+    "with": [{"courses_dept":"math","courses_avg":99.78,"courses_instructor":""}]
+  }

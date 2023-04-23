@@ -1,0 +1,17 @@
+{
+	"title": "queries room address",
+	"input": {
+               "WHERE": {
+                 "IS": {
+                   "rooms_address": "1924 West Mall"
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_name"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_name":"AUDX_142"},{"rooms_name":"AUDX_157"}]
+}

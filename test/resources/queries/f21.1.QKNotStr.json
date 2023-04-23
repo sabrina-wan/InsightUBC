@@ -1,0 +1,19 @@
+{ 
+    "title": "invalid type of COLUMN key throw Insight Error",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses_avg": 99
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          97,
+          "courses_avg"
+        ],
+        "ORDER": "courses_avg"
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

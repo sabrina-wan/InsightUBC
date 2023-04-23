@@ -1,0 +1,15 @@
+{ 
+    "title": "COLUMNS is an empty array throw InsightError",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses_avg": 97
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS":[]
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+}

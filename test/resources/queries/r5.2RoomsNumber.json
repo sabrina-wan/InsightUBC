@@ -1,0 +1,18 @@
+{
+	"title": "queries room number",
+	"input": {
+               "WHERE": {
+                 "IS": {
+                   "rooms_number": "210"
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_name",
+                   "rooms_type"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": [{"rooms_name":"SCRF_210","rooms_type":"Small Group"}]
+}

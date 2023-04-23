@@ -1,0 +1,17 @@
+{
+	"title": "queries rooms furniture",
+	"input": {
+               "WHERE": {
+                 "IS": {
+                   "rooms_furniture": ""
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_furniture"
+                 ]
+               }
+             },
+	"errorExpected": false,
+	"with": []
+}

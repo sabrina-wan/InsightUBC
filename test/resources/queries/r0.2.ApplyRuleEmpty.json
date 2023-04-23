@@ -1,0 +1,19 @@
+{
+    "title": "apply rule array is empty",
+    "input": {
+               "WHERE": {"GT":{"courses_fail":280}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": []
+               }
+             },
+    "errorExpected": false,
+    "with": [{"courses_title":"structural chem"}]
+  }

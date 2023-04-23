@@ -1,0 +1,21 @@
+{
+    "title": "query id has number and special characters",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses2@ubc_avg": 99
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses2@ubc_dept",
+          "courses2@ubc_avg"
+        ],
+        "ORDER": "courses2@ubc_avg"
+      }
+    },
+    "errorExpected": false,
+    "with": [{ "courses2@ubc_dept": "cnps", "courses2@ubc_avg": 99.19 },
+      { "courses2@ubc_dept": "math", "courses2@ubc_avg": 99.78 },
+      { "courses2@ubc_dept": "math", "courses2@ubc_avg": 99.78 }]
+  }

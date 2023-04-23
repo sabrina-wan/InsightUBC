@@ -1,0 +1,30 @@
+{
+    "title": "Order Object has wrong dir key",
+    "input": {
+               "WHERE": {"GT": {"courses_fail": 200}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                     "direction": "UP",
+                     "keys": ["overallAvg"]
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

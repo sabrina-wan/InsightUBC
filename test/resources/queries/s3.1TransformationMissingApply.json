@@ -1,0 +1,29 @@
+{
+    "title": "transformation missing group, throw insight error",
+    "input": {
+               "WHERE": {
+                 "GT": {
+                   "courses_fail": 200
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                   "dir": "DOWN",
+                   "keys": [
+                     "courses_title"
+                   ]
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ]
+               }
+             },
+    "errorExpected": true,
+    "with": "InsightError"
+  }

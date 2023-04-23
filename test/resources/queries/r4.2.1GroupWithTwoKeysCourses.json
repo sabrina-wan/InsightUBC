@@ -1,0 +1,20 @@
+{
+	"title": "two courses keys in group",
+	"input": {
+               "WHERE": {"IS":{"courses_dept": "z*"}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_audit", "courses_dept"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_audit", "courses_dept"
+
+                 ],
+                 "APPLY": []
+               }
+             },
+	"errorExpected": false,
+	"with": [{"courses_audit":0,"courses_dept":"zool"}]
+}

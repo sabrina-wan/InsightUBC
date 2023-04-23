@@ -1,0 +1,25 @@
+{
+	"title": "testing apply SUM",
+	"input": {
+               "WHERE": {
+                 "GT": {
+                   "rooms_seats": 300
+                 }
+               },
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "rooms_shortname", "sumLon"
+                 ]
+               },
+               "TRANSFORMATIONS": {
+                "GROUP": ["rooms_shortname"],
+                "APPLY": [
+                  {"sumLon":{"SUM": "rooms_lon"}}
+                ]
+
+               }
+
+             },
+	"errorExpected": false,
+	"with": [{"rooms_shortname":"CIRS","sumLon":-123.25},{"rooms_shortname":"ESB","sumLon":-123.25},{"rooms_shortname":"HEBB","sumLon":-123.25},{"rooms_shortname":"LSC","sumLon":-246.49},{"rooms_shortname":"OSBO","sumLon":-123.24},{"rooms_shortname":"WESB","sumLon":-123.25},{"rooms_shortname":"WOOD","sumLon":-123.25}]
+}

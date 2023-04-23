@@ -1,0 +1,18 @@
+{
+	"title": "only scomp, with asterisk in front of input string",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"courses_instructor": "*n, meghan"
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_id"
+			]
+		}
+	},
+	"errorExpected": false,
+	"with": [{"courses_dept":"cpsc","courses_id":"110"},{"courses_dept":"cpsc","courses_id":"110"},{"courses_dept":"cpsc","courses_id":"110"},{"courses_dept":"cpsc","courses_id":"110"},{"courses_dept":"cpsc","courses_id":"110"},{"courses_dept":"cpsc","courses_id":"121"},{"courses_dept":"cpsc","courses_id":"121"},{"courses_dept":"cpsc","courses_id":"121"},{"courses_dept":"cpsc","courses_id":"121"},{"courses_dept":"cpsc","courses_id":"210"},{"courses_dept":"cpsc","courses_id":"210"},{"courses_dept":"cpsc","courses_id":"210"},{"courses_dept":"cpsc","courses_id":"210"},{"courses_dept":"cpsc","courses_id":"210"},{"courses_dept":"cpsc","courses_id":"210"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"310"},{"courses_dept":"cpsc","courses_id":"490"},{"courses_dept":"scie","courses_id":"113"},{"courses_dept":"scie","courses_id":"113"},{"courses_dept":"vant","courses_id":"148"}]
+}

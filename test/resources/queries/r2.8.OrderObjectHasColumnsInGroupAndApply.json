@@ -1,0 +1,33 @@
+{
+    "title": "order object has keys in both columns and apply",
+    "input": {
+               "WHERE": {"GT": {"courses_fail": 200}},
+               "OPTIONS": {
+                 "COLUMNS": [
+                   "courses_title",
+                   "overallAvg"
+                 ],
+                 "ORDER": {
+                   "dir": "DOWN",
+                   "keys": [
+                     "overallAvg",
+                     "courses_title"
+                   ]
+                 }
+               },
+               "TRANSFORMATIONS": {
+                 "GROUP": [
+                   "courses_title"
+                 ],
+                 "APPLY": [
+                   {
+                     "overallAvg": {
+                       "AVG": "courses_avg"
+                     }
+                   }
+                 ]
+               }
+             },
+    "errorExpected": false,
+    "with": [{"courses_title":"strctr bond chem","overallAvg":69.06},{"courses_title":"structural chem","overallAvg":68.78},{"courses_title":"unicellular life","overallAvg":68.77},{"courses_title":"prncpls micrecon","overallAvg":67.24},{"courses_title":"int calc ap ph s","overallAvg":65.31},{"courses_title":"cell biology 1","overallAvg":64.73},{"courses_title":"org chem biol sc","overallAvg":64.14}]
+  }

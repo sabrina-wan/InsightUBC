@@ -1,0 +1,19 @@
+{ 
+    "title": "null type of COLUMN key throw InsightError",
+    "input": {
+      "WHERE": {
+        "GT": {
+          "courses_avg": 99
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          null,
+          "courses_avg"
+        ],
+        "ORDER": "courses_avg"
+      }
+    },
+    "errorExpected": true,
+    "with": "InsightError"
+  }
